@@ -1,0 +1,7 @@
+.app {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 160rem;
+  width: 100%;
+}

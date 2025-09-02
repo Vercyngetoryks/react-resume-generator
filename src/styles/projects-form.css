@@ -1,0 +1,204 @@
+/* ProjectsForm - style dla formularza projektu */
+
+.projects-form-container {
+  background-color: var(--clr-secondary);
+  border-radius: var(--radius);
+  padding: 2.4rem;
+  margin-bottom: 2.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+.projects-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--clr-bg);
+}
+
+.projects-form-header h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin: 0;
+}
+
+.remove-project-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-error);
+  background-color: transparent;
+  border: 2px solid var(--clr-error);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-project-btn:hover {
+  background-color: var(--clr-error);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.remove-project-btn:active {
+  transform: translateY(0);
+}
+
+.projects-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+
+.projects-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.projects-form-grid .image-label,
+.projects-form-grid .description-label {
+  grid-column: 1 / -1;
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+.label-icon {
+  color: var(--clr-primary);
+  font-size: 1.6rem;
+}
+
+.projects-form-grid input[type="text"],
+.projects-form-grid input[type="url"] {
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.projects-form-grid input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+.image-input {
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.image-input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+.image-preview {
+  margin-top: 1.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 30rem;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.description-label {
+  grid-column: 1 / -1;
+}
+
+.description-textarea {
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: white;
+  resize: vertical;
+  min-height: 12rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.description-textarea:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .projects-form-container {
+    padding: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .projects-form-header {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+  }
+
+  .projects-form-header h3 {
+    font-size: 2.1rem;
+  }
+
+  .remove-project-btn {
+    font-size: 1.6rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .projects-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .label-with-icon {
+    font-size: 1.6rem;
+  }
+
+  .label-icon {
+    font-size: 1.4rem;
+  }
+
+  .projects-form-grid input[type="text"],
+  .projects-form-grid input[type="url"],
+  .image-input,
+  .description-textarea {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .image-preview {
+    max-width: 100%;
+  }
+}

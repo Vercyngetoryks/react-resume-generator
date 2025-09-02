@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+  background-color: var(--clr-secondary);
+  border-bottom: 1px solid var(--clr-border);
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 6.3rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.header p {
+  color: var(--clr-text-muted);
+  font-size: 2.7rem;
+}

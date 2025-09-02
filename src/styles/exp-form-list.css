@@ -1,0 +1,70 @@
+/* ========== EXP FORM LIST STYLES ========== */
+
+.exp-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.add-exp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  background-color: transparent;
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 2.4rem;
+  min-height: 6rem;
+  width: 100%;
+}
+
+.add-exp-btn:hover {
+  background-color: var(--clr-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+}
+
+.add-exp-btn:active {
+  transform: translateY(0);
+}
+
+.add-exp-btn svg {
+  font-size: 2.4rem;
+}
+
+/* Animacja dla nowych formularzy */
+.exp-form-container {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .add-exp-btn {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    min-height: 5rem;
+  }
+
+  .add-exp-btn svg {
+    font-size: 2rem;
+  }
+}

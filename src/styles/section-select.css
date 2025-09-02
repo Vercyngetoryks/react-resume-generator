@@ -1,0 +1,10 @@
+.section-select {
+  margin: 0 auto;
+  padding: 3rem 4rem;
+  display: flex;
+  gap: 3rem;
+  background-color: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border-light);
+  width: 100%;
+  justify-content: center;
+}

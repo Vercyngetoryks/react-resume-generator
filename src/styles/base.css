@@ -1,0 +1,112 @@
+/* ========== RESET & BASE STYLES ========== */
+
+/* 1. Ustawienia globalne */
+:root {
+  /* 🔹 System typografii */
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 2.4rem;
+  --line-height-base: 1.5;
+
+  /* 🔹 Kolory */
+  --clr-bg: #ffffff;
+  --clr-text: #1a1a1a;
+  --clr-text-muted: #6b7280;
+  --clr-primary: #0077ff;
+  --clr-primary-light: #3b82f6;
+  --clr-primary-dark: #1d4ed8;
+  --clr-secondary: #f8fafc;
+  --clr-secondary-dark: #e2e8f0;
+  --clr-border: #e5e7eb;
+  --clr-border-light: #f3f4f6;
+  --clr-success: #10b981;
+  --clr-warning: #f59e0b;
+  --clr-error: #ef4444;
+  --clr-alert: #dc2626;
+
+  /* 🔹 Spacing (np. do marginesów/paddingów) */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 3.2rem;
+
+  /* 🔹 Promienie, cienie */
+  --radius: 1rem;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+  font-family: var(--font-family);
+  font-size: 62.5%; /* 1rem = 10px */
+  line-height: var(--line-height-base);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Box sizing i marginesy */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Body */
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: 2.4rem; /* domyślnie 24px */
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+/* 4. Media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Formularze */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Teksty */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 7. Root stacking context (dla React app) */
+#root {
+  isolation: isolate;
+}

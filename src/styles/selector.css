@@ -1,0 +1,35 @@
+.selector {
+  width: 18rem;
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-secondary);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text-muted);
+  transition: all 0.2s ease;
+}
+
+.selector:hover {
+  background-color: var(--clr-secondary-dark);
+  border-color: var(--clr-primary);
+}
+
+.selector.active {
+  background-color: var(--clr-primary);
+  color: white;
+  border-color: var(--clr-primary);
+}
+
+.selector-id {
+  font-weight: 600;
+  font-size: 2.1rem;
+}
+
+.selector-description {
+  font-size: 1.8rem;
+}

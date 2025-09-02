@@ -1,0 +1,180 @@
+/* ========== EXP FORM STYLES ========== */
+
+.exp-form-container {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 2.4rem;
+  margin-bottom: 2.4rem;
+  background-color: var(--clr-secondary);
+}
+
+.exp-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--clr-border-light);
+}
+
+.exp-form-header h3 {
+  font-size: 2.1rem;
+  color: var(--clr-text);
+  margin: 0;
+  font-weight: 600;
+}
+
+.remove-exp-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  color: var(--clr-error);
+  background-color: transparent;
+  border: 1px solid var(--clr-error);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-exp-btn:hover {
+  background-color: var(--clr-error);
+  color: white;
+}
+
+.exp-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+
+.exp-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2.1rem;
+  color: var(--clr-text);
+}
+
+.label-icon {
+  font-size: 2.4rem;
+  color: var(--clr-primary);
+  width: 2.4rem;
+}
+
+.exp-form-grid input[type="text"],
+.exp-form-grid input[type="month"] {
+  padding: 1.2rem 1.8rem;
+  font-size: 2.1rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: var(--clr-bg);
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.exp-form-grid input[type="text"]:focus,
+.exp-form-grid input[type="month"]:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+}
+
+.exp-form-grid input[type="text"]:disabled,
+.exp-form-grid input[type="month"]:disabled {
+  background-color: var(--clr-border-light);
+  color: var(--clr-text-muted);
+  cursor: not-allowed;
+}
+
+.date-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  padding: 1.2rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: var(--clr-bg);
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  border-color: var(--clr-primary);
+  background-color: var(--clr-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  accent-color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.checkbox-text {
+  font-size: 2.1rem;
+  color: var(--clr-text);
+  font-weight: 500;
+}
+
+.description-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.description-textarea {
+  padding: 1.2rem 1.8rem;
+  font-size: 2.1rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background-color: var(--clr-bg);
+  width: 100%;
+  min-height: 12rem;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.description-textarea:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+}
+
+.description-textarea::placeholder {
+  color: var(--clr-text-muted);
+  font-style: italic;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .exp-form-container {
+    padding: 1.8rem;
+  }
+
+  .date-row {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .exp-form-header {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+}

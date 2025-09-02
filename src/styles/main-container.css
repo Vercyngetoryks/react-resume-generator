@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem;
+  background-color: var(--clr-secondary);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  border-top: 1px solid var(--clr-border-light);
+  background-color: var(--clr-secondary);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.nav-btn {
+  padding: 1.2rem 2.4rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 12rem;
+}
+
+.prev-btn {
+  background-color: transparent;
+  color: var(--clr-primary);
+}
+
+.prev-btn:hover:not(:disabled) {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.prev-btn:disabled {
+  border-color: var(--clr-border);
+  color: var(--clr-text-muted);
+  cursor: not-allowed;
+}
+
+.next-btn {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.next-btn:hover:not(:disabled) {
+  background-color: var(--clr-primary-dark);
+  border-color: var(--clr-primary-dark);
+}
+
+.next-btn:disabled {
+  background-color: var(--clr-border);
+  border-color: var(--clr-border);
+  color: var(--clr-text-muted);
+  cursor: not-allowed;
+}
